@@ -53,7 +53,7 @@ class DB:
         self.conn.commit()
 
     def DeleteProfileByName(self, first_name1, last_name1):
-        self.db.execute("DELETE FROM personal_info WHERE first_name = (?) last_name = (?)", (first_name1, last_name1,))
+        self.db.execute("DELETE FROM personal_info WHERE first_name = (?) AND last_name = (?)", (first_name1, last_name1,))
         self.conn.commit()
 
     def GetAll(self):
